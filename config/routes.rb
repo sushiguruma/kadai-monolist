@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'rankings/want'
-
   root to: 'toppages#index'
   
   get 'login', to: 'sessions#new'
@@ -9,6 +7,7 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   get 'rankings/want', to: 'rankings#want'
+  get 'rankings/have', to: 'rankings#have'
   resources :users, only: [:show, :new, :create]
   
   resources :items, only: [:show, :new]
